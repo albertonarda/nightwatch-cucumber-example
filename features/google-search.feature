@@ -1,13 +1,13 @@
 Feature: Google Search
 
-Scenario: Searching Google
+  Scenario: Open Google
 
-  Given I open Google`s search page
-  Then the title is "Google"
-  And the Google search form exists
+    Given I open the url "https://www.google.com/"
+    Then the title should be "Google"
+    And the Google search form exists
 
-Scenario: Searching Google again
+  Scenario: Click on I Feel Lucky on Google
 
-  Given I open Google`s search page
-  Then the title is "Google"
-  And the Google search form exists
+    Given I open the url "https://www.google.com/"
+    When I click on I Feel Lucky button
+    Then the url should be "https://www.google.com/doodles/"
